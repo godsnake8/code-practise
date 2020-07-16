@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日历</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        table{
+            border: solid 1px #999999;
+             /* border-collapse: collapse; */
+            text-align: center;
+            font-size: 18px;
+            color: #000;
+            margin: 0 auto;
+            
+        }
+        table::after{
+            content: ' ';
+            display: block;
+            clear: both;
+        }
+        th{
+            font-size: 14px;
+            color: #333;
+            font-weight: normal;
+            width: 55px;
+            height: 33px;
+            border-top-color: #5af;
+        }
+        td{
+            width: 55px;
+            height: 54px;
+            border: 3px transparent #fb0;
+            box-sizing: border-box;
+        }
+        td:hover{
+           border: solid #fb0;
+        }
+        td:focus{
+            border: solid #fb0;
+        }
+        th:nth-child(6n),
+        th:nth-child(7n),
+        td:nth-child(6n),
+        td:nth-child(7n){
+            color: #e02d2d;
+        }
+        .date .almanac{
+            font-size: 12px;
+            color: #999;
+        }
+        tr:nth-child(1) td:nth-child(1) .number,
+        tr:nth-child(1) td:nth-child(1) .almanac,
+        tr:nth-child(1) td:nth-child(2) .number,
+        tr:nth-child(1) td:nth-child(2) .almanac,
+        tr:nth-child(5) td:nth-child(5)~td .number,
+        tr:nth-child(5) td:nth-child(5)~td .almanac,
+        tr:nth-child(6) .number,
+        tr:nth-child(6) .almanac{
+            color: #999;
+            opacity: 0.5;
+        }
+        .almanac.festival{
+            color: #E02D2D;
+        }
+        tr::after{
+            content: '';
+            display: block;
+            width: 400px;
+            height: 1px;
+            background-color: #999;
+            margin-left: -400px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    <div class="date">一</div>
+                </th>
+                <th>
+                    <div class="date">二</div>
+                </th>
+                <th>
+                    <div class="date">三</div>
+                </th>
+                <th>
+                    <div class="date">四</div>
+                </th>
+                <th>
+                    <div class="date">五</div>
+                </th>
+                <th>
+                    <div class="date">六</div>
+                </th>
+                <th>
+                    <div class="date">日</div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="date">
+                        <div class="number">29</div>
+                        <div class="almanac">初九</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">30</div>
+                        <div class="almanac">初十</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">1</div>
+                        <div class="almanac festival">建党节</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">2</div>
+                        <div class="almanac">十二</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">3</div>
+                        <div class="almanac">十三</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">4</div>
+                        <div class="almanac">十四</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">5</div>
+                        <div class="almanac">十五</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="date">
+                        <div class="number">6</div>
+                        <div class="almanac festival">小暑</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">7</div>
+                        <div class="almanac festival">高考</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">8</div>
+                        <div class="almanac">十八</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">9</div>
+                        <div class="almanac">十九</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">10</div>
+                        <div class="almanac">二十</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">11</div>
+                        <div class="almanac">廿一</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">12</div>
+                        <div class="almanac">廿二</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="date">
+                        <div class="number">13</div>
+                        <div class="almanac">廿三</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">14</div>
+                        <div class="almanac">廿四</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">15</div>
+                        <div class="almanac">廿五</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">16</div>
+                        <div class="almanac">廿六</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">17</div>
+                        <div class="almanac">廿七</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">18</div>
+                        <div class="almanac">廿八</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">19</div>
+                        <div class="almanac">廿九</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="date">
+                        <div class="number">20</div>
+                        <div class="almanac">三十</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">21</div>
+                        <div class="almanac">初一</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">22</div>
+                        <div class="almanac festival">大暑</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">23</div>
+                        <div class="almanac">初三</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">24</div>
+                        <div class="almanac">初四</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">25</div>
+                        <div class="almanac">初五</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">26</div>
+                        <div class="almanac">初六</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="date">
+                        <div class="number">27</div>
+                        <div class="almanac">初七</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">28</div>
+                        <div class="almanac">初八</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">29</div>
+                        <div class="almanac">初九</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">30</div>
+                        <div class="almanac">初十</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">31</div>
+                        <div class="almanac">十一</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">1</div>
+                        <div class="almanac">建军节</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">2</div>
+                        <div class="almanac">十三</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="date">
+                        <div class="number">3</div>
+                        <div class="almanac">十四</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">4</div>
+                        <div class="almanac">十五</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">5</div>
+                        <div class="almanac">十六</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">6</div>
+                        <div class="almanac">十七</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">7</div>
+                        <div class="almanac">立秋</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">8</div>
+                        <div class="almanac">十九</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="date">
+                        <div class="number">9</div>
+                        <div class="almanac">二十</div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

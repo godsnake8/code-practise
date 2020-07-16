@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东登录界面</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+        }
+        .box{
+            width: 306px;
+            height: 340px;
+            padding: 20px;
+        }
+        .box .login a{
+            float: left;
+            /* display: inline-block; */
+            width: 153px;
+            height: 54px;
+            line-height: 54px;
+            font-size: 18px;
+            color: #666666;
+            font-family: "microsoft yahei";
+            border-bottom: 1px solid #f4f4f4;
+            margin-bottom: 33px;
+        }
+        .box .login a:hover{
+            color: #E4393C;
+            font-weight: 700;
+        }
+        .box .username{
+            float: left;
+            width: 100%;
+            height: 38px;
+            margin-bottom: 20px;
+        }
+        .box .icon-1{
+            float: left;
+            width: 36px;
+            height: 36px;
+            border-top: 1px solid #bdbdbd;
+            border-left: 1px solid #bdbdbd;
+            border-bottom: 1px solid #bdbdbd;
+            background: url(img/pwd-icons-new.png) no-repeat;
+        }
+        .box .usernamein{
+            float: left;
+            width: 254px;
+            height: 18px;
+            border: 1px solid #bdbdbd;
+            padding: 9px 0 9px 13px;
+            font-size: 14px;
+            font-family: '\5b8b\4f53';
+            text-align: left;
+        }
+        .box .password{
+            float: left;
+            width: 100%;
+            height: 38px;
+            margin-bottom: 20px;
+        }
+        .box .icon-2{
+            float: left;
+            width: 36px;
+            height: 36px;
+            border-top: 1px solid #bdbdbd;
+            border-left: 1px solid #bdbdbd;
+            border-bottom: 1px solid #bdbdbd;
+            background: url(img/pwd-icons-new.png) no-repeat -48px 0;
+        }
+        .box .passwordin{
+            float: left;
+            width: 254px;
+            height: 18px;
+            border: 1px solid #bdbdbd;
+            padding: 9px 0 9px 13px;
+            font-size: 14px;
+            font-family: '\5b8b\4f53';
+            text-align: left;
+        }
+        .box .forget{
+            width: 100%;
+            height: 18px;
+        }
+        .box .forget a{
+            float: right;
+            height: 18px;
+            line-height: 18px;
+            font-size: 12px;
+            color: #666;
+        }
+        .box .forget a:hover{
+            color: #e4393c;
+            text-decoration: underline;
+        }
+        .box .login-bottom a{
+            float: left;
+            width: 100%;
+            height: 33px;
+            line-height: 33px;
+            background-color: #e4393c;
+            font-size: 20px;
+            color: #ffffff;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            letter-spacing: 20px;
+        }
+        .box .other{
+            float: left;
+            width: 100%;
+            height: 50px;
+            border-top: solid 1px #f4f4f4;
+            background-color: #fcfcfc;
+        }
+        .box .qq-icon{
+            float: left;
+            width: 19px;
+            height: 18px;
+            background: url(img/qq-wx.png) no-repeat;
+            margin: 16px 0;
+        }
+        .box .qq{
+            float: left;
+            height: 100%;
+            line-height: 50px;
+        }
+        .box .qq a{
+            display: inline-block;
+            height: 50px;
+            line-height:50px;
+            color: #666;
+            font-size: 12px;
+        }
+        .box .qq a:hover{
+            color: #e4393c;
+            text-decoration: underline;
+        }
+        .box .line{
+            float: left;
+            color: #ccc;
+            font-size: 12px;
+            line-height: 50px;
+            padding: 0 10px;
+        }
+        .box .weixin-icon{
+            float: left;
+            width: 19px;
+            height: 18px;
+            background: url(img/qq-wx.png) no-repeat -20px;
+            margin: 16px 0;
+        }
+        .box .weixin{
+            float: left;
+            height: 100%;
+            line-height: 50px;
+        }
+        .box .weixin a{
+            display: inline-block;
+            height: 50px;
+            line-height:50px;
+            color: #666;
+            font-size: 12px;
+        }
+        .box .weixin a:hover{
+            color: #e4393c;
+            text-decoration: underline;
+        }
+        .box .regist{
+            float: right;
+        }
+        .box .regist a{
+            float: right;
+            font-size: 14px;
+            color: #b61d1d;
+            height: 50px;
+            line-height: 50px;
+        }
+        .box .regist a:hover{
+            text-decoration: underline;
+        }
+        .box .ar-right{
+            float: left;
+            width: 18px;
+            height: 18px;
+            background: url(img/pwd-icons-new.png) no-repeat -103px -74px;
+            margin: 16px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="login">
+            <a href="#">扫码登录</a>
+        </div>
+        <div class="login">
+            <a href="#">账户登录</a>
+        </div>
+        <div class="username">
+            <div class="icon-1"></div>
+            <input type="text" name="username" class="usernamein" placeholder="邮箱/用户名/登录手机">
+        </div>
+        <div class="password">
+            <div class="icon-2"></div>
+            <input type="password" name="password" class="passwordin" placeholder="密码">
+        </div>
+        <div class="forget">
+            <a href="#">忘记密码</a>
+        </div>
+        <div class="login-bottom">
+            <a href="#">登录</a>
+        </div>
+        <div class="other">
+            <div class="qq">
+                <a href="#">
+                <div class="qq-icon"></div> QQ
+                </a>
+            </div>
+            <span class="line">|</span>
+            <div class="weixin">
+                <a href="#">
+                <div class="weixin-icon"></div> 微信
+                </a>
+            </div>
+            <div class="regist">
+                <a href="#"><span class="ar-right"></span> 立即注册</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

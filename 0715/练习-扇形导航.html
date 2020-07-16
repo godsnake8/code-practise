@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>扇形导航</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,
+        body{
+            height: 100%;
+            background-color:#f9f9f9;
+        }
+        .subnav{
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            right: 10px;
+            top: 10px;
+        }
+        .navlist{
+            width: 50px;
+            height: 50px;
+            position: relative;
+        }
+        .item-1,
+        .item-2,
+        .item-3,
+        .item-4,
+        .item-5{
+            position: absolute;
+            right: 3px;
+            top: 3px;
+            z-index: 1;
+            transition: 0.8s;
+        }
+        .home{
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 2;
+            transition: 1s;
+            
+        }
+        .home:hover{
+            transform: rotate(360deg);
+        }
+        .navlist:hover .item-1{
+            transform: translate(-150px,0) rotate(720deg);
+        }
+        .navlist:hover .item-2{
+            transform: translate(-139px,57px) rotate(720deg);
+            transition-delay: 0.1s;
+        }
+        .navlist:hover .item-3{
+            transform: translate(-106px,106px) rotate(720deg);
+            transition-delay: 0.2s;
+        }
+        .navlist:hover .item-4{
+            transform: translate(-57px,139px) rotate(720deg);
+            transition-delay: 0.3s;
+        }
+        .navlist:hover .item-5{
+            transform: translate(0,150px) rotate(720deg);
+            transition-delay: 0.4s;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="subnav">
+        <div class="navlist">
+            <img src="案例/扇形导航/img/home.png" alt="" class="home">            
+            <img src="案例/扇形导航/img/prev.png" alt="" class="item-1">
+            <img src="案例/扇形导航/img/open.png" alt="" class="item-2">
+            <img src="案例/扇形导航/img/clos.png" alt="" class="item-3">
+            <img src="案例/扇形导航/img/full.png" alt="" class="item-4">
+            <img src="案例/扇形导航/img/refresh.png" alt="" class="item-5">
+            
+        </div>   
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单</title>
+</head>
+<body>
+    <form action="" method="POST">
+        <label for="name">姓名: </label><input type="text" name="username" id="name"><br>
+        <label for="pwd">密码: </label><input type="password" name="pwd" id="pwd"><br>
+        <label for="repeatpwd">确认密码: </label><input type="password" name="pwd" id="repeatpwd"><br>
+        <label for="question">密码提示问题: </label><select name="question" id="question">
+            <option value="0" selected>请选择一个问题</option>
+            <option value="1">你的生日</option>
+            <option value="2">你的三围</option>
+        </select><br>
+        <label for="answer">密码提示答案: </label><input type="text" name="answer" id="answer"><br>
+        性别: <label for="men"> 男</label><input type="radio" name="sex" id="men" value="0" checked><label for="women"> 女</label><input type="radio" name="sex" id="women" value="1"><br>
+        <label for="age">年龄: </label><input type="text" name="age" id="age"><br>
+        籍贯: <select name="provice" id="provice">
+            <option value="0" selected>请选择</option>
+            <option value="1">江苏</option>
+            <option value="2">河南</option>
+            <option value="3">广州</option>
+        </select><label for="provice">省/直辖市</label>
+        <select name="city" id="city">
+            <option value="0" selected>请选择</option>
+            <option value="1">广州</option>
+            <option value="2">郑州</option>
+            <option value="3">南京</option>
+        </select><label for="city">市</label><br>
+        爱好: <input type="checkbox" name="hobby" id="internet" value="1"><label for="internet"> 上网</label>
+        <input type="checkbox" name="hobby" id="sports" value="2"><label for="sports"> 体育</label>
+        <input type="checkbox" name="hobby" id="study" value="3"><label for="study"> 学习</label><br>
+        个人介绍: <textarea name="introduction"  cols="30" rows="10">
+        </textarea><br>
+        上传头像: <input type="text" name="file"> <input type="file"><br>
+        <input type="submit"> <input type="reset">
+    </form>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .banner{
+            position: relative;
+            width: 1226px;
+            height: 460px;
+            background: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5ade887b241d057d81e2de96590a1a6f.jpg?w=2452&h=920) no-repeat ;
+            background-size: 1226px 460px;
+            /* z-index: 1; */
+        }
+        .banner .banner-list{
+            width: 234px;
+            height: 420px;
+            padding: 20px 0;
+            background-color: rgba(148, 164, 168,0.8);
+        }
+        .banner .list-item{
+            width: 234px;
+            height: 42px;
+            
+        }
+        .banner .list-item a{
+            display: inline-block;
+            width: 204px;
+            height: 42px;
+            line-height: 42px;
+            padding-left: 30px;
+            color: white;
+            /* font-size: 14px; */
+        }
+        .banner .list-item:hover{
+            background-color: rgb(255, 125, 0);
+        }
+        .banner .list-icon{
+            /* vertical-align: middle; */
+            float: right;
+            padding: 13px 20px 13px 0;
+        }
+        .banner .banner-left{
+            width: 41px;
+            height: 69px;
+            background: url(../../01-HTML+CSS基础/05-CSS基础/dev/img/arr.png) no-repeat -83px 0;
+            position: absolute;
+            left: 234px;
+            top: 195.5px;
+        }
+        .banner .banner-left:hover{
+            background: url(../../01-HTML+CSS基础/05-CSS基础/dev/img/arr.png) no-repeat 0 0;
+        }
+        .banner .banner-right{
+            width: 41px;
+            height: 69px;
+            background: url(../../01-HTML+CSS基础/05-CSS基础/dev/img/arr.png) no-repeat -125px 0;
+            position: absolute;
+            right: 0;
+            top: 195.5px;
+        }
+        .banner .banner-right:hover{
+            background: url(../../01-HTML+CSS基础/05-CSS基础/dev/img/arr.png) no-repeat -41.5px 0;
+        }
+        .banner .sublist{
+            width: 992px;
+            height: 460px; 
+            display: none; 
+            border: 1px gray solid;
+            background: white;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 2;
+        }
+        .banner .list-item:hover .sublist{
+            display: block;
+        }
+        .banner .swiper{
+            width: 200px;
+            height: 20px;
+            position: absolute;
+            right: 30px;
+            bottom: 20px;
+            /* text-align: right; */
+        }
+        .banner .swiper a{
+            float: right;
+            overflow: hidden;
+            width: 6px;
+            height: 6px;
+            border: 2px solid gray;
+            border-radius: 50%;
+            margin:5px 4px;
+            background-color: rgb(32, 32, 32);
+        }
+        .banner .swiper a:hover{
+            background-color: rgb(210,210,210);
+        }
+        .banner .sublist-item a{
+            display: block;
+            padding: 18px 20px;
+            line-height: 40px;
+        }
+        
+
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="banner-list">
+            <ul class="list">
+                <li class="list-item">
+                    <a href="#">
+                    手机 电话卡
+                    <img class="list-icon" src="../../01-HTML+CSS基础/05-CSS基础/dev/img/arrow.png" alt="">
+                    </a>
+                    <div class="sublist">
+                        <ul class="sublist-menu">
+                            <li class="sublist-item">
+                                <a href="#">
+                                    <img src="../../01-HTML+CSS基础/05-CSS基础/dev/images/arr.png" alt="">Redmi 9
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="list-item">
+                    <a href="#">
+                    电视 盒子
+                    <img class="list-icon" src="../../01-HTML+CSS基础/05-CSS基础/dev/img/arrow.png" alt="">
+                    </a>
+
+                </li>
+                <li class="list-item">
+                    <a href="#">
+                    笔记本 显示器 平板
+                    <img class="list-icon" src="../../01-HTML+CSS基础/05-CSS基础/dev/img/arrow.png" alt="">
+                    </a>
+
+                </li>
+                <li class="list-item">
+                    <a href="#">
+                    家电 插线板
+                    <img class="list-icon" src="../../01-HTML+CSS基础/05-CSS基础/dev/img/arrow.png" alt="">
+                    </a>
+
+                </li>
+                <li class="list-item">
+                    <a href="#">
+                    出行 穿戴
+                    <img class="list-icon" src="../../01-HTML+CSS基础/05-CSS基础/dev/img/arrow.png" alt="">
+                    </a>
+
+                </li>
+                <li class="list-item">
+                    <a href="#">
+                    智能 路由器
+                    <img class="list-icon" src="../../01-HTML+CSS基础/05-CSS基础/dev/img/arrow.png" alt="">
+                    </a>
+
+                </li>
+                <li class="list-item">
+                    <a href="#">
+                    手电源 配件
+                    <img class="list-icon" src="../../01-HTML+CSS基础/05-CSS基础/dev/img/arrow.png" alt="">
+                    </a>
+
+                </li>
+                <li class="list-item">
+                    <a href="#">
+                    健康 儿童
+                    <img class="list-icon" src="../../01-HTML+CSS基础/05-CSS基础/dev/img/arrow.png" alt="">
+                    </a>
+
+                </li>
+                <li class="list-item">
+                    <a href="#">
+                    耳机 音响
+                    <img class="list-icon" src="../../01-HTML+CSS基础/05-CSS基础/dev/img/arrow.png" alt="">
+                    </a>
+
+                </li>
+                <li class="list-item">
+                    <a href="#">
+                    生活 箱包
+                    <img class="list-icon" src="../../01-HTML+CSS基础/05-CSS基础/dev/img/arrow.png" alt="">
+                    </a>
+
+                </li>
+            </ul>
+            <div class="banner-left">
+
+            </div>
+            <div class="banner-right">
+
+            </div>
+            <div class="swiper">
+                <a href="#" class="swiper-botton"></a>
+                <a href="#" class="swiper-botton"></a>
+                <a href="#" class="swiper-botton"></a>
+                <a href="#" class="swiper-botton"></a>
+                <a href="#" class="swiper-botton"></a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

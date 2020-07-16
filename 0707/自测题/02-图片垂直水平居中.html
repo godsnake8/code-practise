@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .box{
+            margin: 0 auto;
+        }
+        .img{
+            margin-top: 0px;
+        } */
+        /* 第一种方法必须已知父元素的宽高 */
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            position: relative;
+        }
+        .img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin-left: -8px;
+            margin-top: -8px;
+            /* 需要已知子元素的宽高 */
+            
+        }
+
+    </style>
+    
+
+    <!-- 是图标  在 box 中 水平垂直居中 -->
+</head>
+<body>
+    <div class="box">
+        <img class="img" src="../img/arrow.png" alt="">
+    </div>
+</body>
+</html>

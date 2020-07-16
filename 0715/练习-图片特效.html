@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片hover</title>
+    <style>
+        /* 全局设置 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            width: 100%;
+            height: 1000px;
+            font-size: 0;
+        }
+        .img-1,
+        .img-2,
+        .img-3,
+        .img-4,
+        .img-5{
+            float: left;
+            margin: 50px 100px 50px 100px;
+        }
+        img{
+            width: 480px;
+            height: 300px;
+        }
+        /* 第一张图 */
+        .img-1{
+            position: relative;
+            
+        }
+        .img-1 .text-1{
+            position: absolute;
+            left: 0;
+            bottom: 40px;
+            width: 100%;
+            font-size: 22px;
+            color: #fff;
+            font-weight: 700;
+            text-align: center;
+            z-index: 3;
+            transition: all ease-in-out 0.3s;
+        }
+        .img-1 .text-2{
+            position: absolute;
+            left: 0;
+            bottom: -30px;
+            width: 100%;
+            font-size: 14px;
+            color: #fff;
+            text-align: center;
+            overflow: hidden;
+            z-index: 3;
+            transition: all ease-in-out 0.3s;
+        }
+        .img-1 .mask{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 480px;
+            height: 300px;
+            background: linear-gradient(to top, rgba(72, 76, 97, 0.6) 0%,rgba(72, 76, 97, 0)  60%);
+            z-index: 2;
+            transition: all ease-in-out 0.2s;
+            opacity: 0;
+            
+        }
+        .img-1:hover .text-1{
+            /* margin-bottom: 35px; */
+            transform: translate3d(0,-40px,0);
+        }
+        .img-1:hover .text-2{
+            transform: translate3d(0,-70px,0);
+        }
+        .img-1:hover .mask{
+            opacity: 1;
+        }
+        /* 第二张图 */
+        .img-2{
+            position: relative;
+        }
+        .img-2 .text-1{
+            position: absolute;
+            left: 0;
+            bottom: 150px;
+            width: 100%;
+            font-size: 22px;
+            color: #fff;
+            text-align: center;
+            font-weight: 700;
+        }
+        .img-2 .border-box{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 330px;
+            height: 150px;
+            border: 1px transparent #fff;
+            transition: all ease-in-out 0.3s;
+        }
+        .img-2:hover{
+            opacity: 0.8;
+        }
+        .img-2:hover .border-box{
+            border: 1px solid #fff;
+            width: 430px;
+            height: 250px;
+        }
+        /* 第三张图 */
+        .img-3{
+            position: relative;
+            transition: all ease-in-out 0.3s;
+        }
+        .img-3 .text-1{
+            position: absolute;
+            left: 10%;
+            bottom: 25%;
+            width: 100%;
+            font-size: 24px;
+            color: #fff;
+            font-weight: 700;
+            transition: all ease-in-out 0.3s;
+        }
+        .img-3 .text-2{
+            position: absolute;
+            left: 20%;
+            bottom: 15%;
+            width: 100%;
+            font-size: 24px;
+            color: #fff;
+            font-weight: 700;
+            overflow: hidden;
+            opacity: 0;
+            transition: all ease-in-out 0.3s;
+        }
+        .img-3:hover{
+            opacity: 0.8;
+            transform: translate3d(-50px,0,0);
+        }
+        .img-3:hover .text-1{
+            transform: translate3d(-25px,0,0);
+        }
+        .img-3:hover .text-2{
+            opacity: 1;
+            transform: translate3d(-25px,0,0);
+        }
+        /* 第四张图 */
+        .img-4{
+            position: relative;
+            width: 480px;
+            height: 300px;
+            overflow: hidden;
+        }
+        .img-4 img{
+            transition: all ease-in-out 0.3s;
+        }
+        .img-4 .text-1{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 100%;
+            font-size: 24px;
+            color: #fff;
+            font-weight: 700;
+            text-align: center;
+        }
+        .img-4 .text-2{
+            position: absolute;
+            left: 0;
+            bottom: 25%;
+            width: 100%;
+            font-size: 24px;
+            color: #fff;
+            text-align: center;
+            transition: all ease-in-out 0.3s;
+            opacity: 0;
+        }
+        .img-4:hover img{
+            transform: scale(1.3,1.3);
+            filter: grayscale(100%);
+        }
+        .img-4:hover .text-2{
+            font-size: 14px;
+            opacity: 1;
+        }
+        /* 第五张图 */
+        .img-5{
+            position: relative;
+        }
+        .img-5 .text-1{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 100%;
+            font-size: 24px;
+            color: #fff;
+            font-weight: 700;
+            text-align: center;
+            opacity: 0;
+            transition: all ease-in-out 0.3s;
+        }
+        .img-5 .text-2{
+            position: absolute;
+            left: 50%;
+            top: 65%;
+            transform: translate(-50%,-50%);
+            width: 100%;
+            font-size: 14px;
+            color: #fff;
+            text-align: center;
+            opacity: 0;
+            transition: all ease-in-out 0.3s;
+        }
+        .img-5 .border-box{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 480px;
+            height: 300px;
+            opacity: 0;
+            transition: all ease-in-out 0.3s;
+        }
+        .img-5:hover img{
+            opacity: 0.8;
+        }
+        .img-5:hover .text-1{
+            opacity: 1;
+        }
+        .img-5:hover .text-2{
+            opacity: 1;
+        }
+        .img-5:hover .border-box{
+            width: 360px;
+            height: 225px;
+            border: 1px solid #fff;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="img-1">
+            <img src="案例/图片-hover/1.jpg" alt="">
+            <div class="text-1">EMMYLOU</div>
+            <div class="text-2">I'll be your Emmylou and I'll be your June</div>
+            <div class="mask"></div>
+        </div>
+        <div class="img-2">
+            <img src="案例/图片-hover/2.jpg" alt="">
+            <div class="text-1">Jenny of Oldstones</div>
+            <div class="border-box"></div>
+        </div>
+        <div class="img-3">
+            <img src="案例/图片-hover/3.jpg" alt="">
+            <div class="text-1">The Pursuit of</div>
+            <div class="text-2">HAPPINESS</div>
+        </div>
+        <div class="img-4">
+            <img src="案例/图片-hover/4.jpg" alt="">
+            <div class="text-1">Postcards From Italy</div>
+            <div class="text-2">And I will love to see that day</div>
+        </div>
+        <div class="img-5">
+            <img src="案例/图片-hover/5.jpg" alt="">
+            <div class="text-1">Blue Ridge</div>
+            <div class="text-2">MOUNTAINS</div>
+            <div class="border-box"></div>
+        </div>
+    </div>
+</body>
+</html>

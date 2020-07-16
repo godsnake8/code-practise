@@ -1,0 +1,61 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: gray;
+}
+.talk{
+    width: 1160px;
+    margin:0 auto;
+    margin-top: 50px;
+    background-color: #fff;
+}
+.talk .title-zh{
+    font-weight: 700; 
+    font-size: 22px;
+    display: inline-block;
+    line-height: 30px;
+}
+.talk .title-en{
+    font-family: DINCondensed;
+    font-size: 14px;
+    color: gray;
+    display: inline-block;
+    margin-left: 12px;
+    margin-top: 13px;
+}
+.talk .content{
+    font-size: 0;
+    padding-top: 20px;
+}
+.talk .item{
+    display: inline-block;
+    margin-right: 20px;
+}
+.talk .item-pic{
+    width: 275px;
+    height: 105px;
+}
+.talk .talk-name{
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 700; 
+    margin-top: 8px;
+}
+.talk .talk-date{
+    height: 17px;
+    font-size: 12px;
+    color: gray;
+    margin-top: 4px;
+    /* vertical-align: middle; */
+}
+.talk .date-pic{
+    width: 17px;
+    height: 17px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.talk .item.mr0{
+    margin-right: 0;
+}

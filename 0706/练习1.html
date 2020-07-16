@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box-1{
+            width: 250px;
+            height: 20px;
+            background-color: red;
+            /* 文本不换行 */
+            white-space: nowrap;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .box-1:hover{
+            overflow: visible;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box-1">
+        我是一段长文本我是一段长文本我是一段长文本我是一段长文本
+    </div>
+</body>
+</html>
