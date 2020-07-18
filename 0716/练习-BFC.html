@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFC应用</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .box {
+            width: 300px;
+            background-color: pink;
+            margin: 100px auto;
+            font-size: 14px;
+            color: gray;
+        }
+
+        .novel {
+            background-color: pink;
+            width: 300px;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .introduction {
+            height: 50px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+        }
+
+        .tag {
+            float: right;
+        }
+
+        .type {
+            font-size: 10px;
+            border: 1px solid gray;
+        }
+
+        .status {
+            font-size: 10px;
+            border: 1px solid red;
+            color: red;
+        }
+
+        .longth {
+            font-size: 10px;
+            border: 1px solid blue;
+            color: blue;
+        }
+
+        .tag div+div {
+            margin-left: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul class="list">
+            <li class="novel">
+                <!-- <div class="introduction">这次是一个新的故事省略省略省略省略省略省略省略省略</div> -->
+                <div class="tag">
+                    <span class="type">都市</span>
+                    <span class="status">连载中</span>
+                    <span class="longth">54.82万字</span>
+                </div>
+                <div class="introduction">这次是一个新的故事省略省略省略省略省略省略省略省略</div>
+            </li>
+            <li class="novel">
+                <!-- <div class="introduction">穿越天地复苏的平行世界省略省略省略省略省略省略省略省略</div> -->
+                <div class="tag">
+                    <span class="type">都市</span>
+                    <span class="status">完本</span>
+                    <span class="longth">1万字</span>
+                </div>
+                <div class="introduction">穿越天地复苏的平行世界省略省略省略省略省略省略省略省略</div>
+            </li>
+            <li class="novel">
+                <!-- <div class="introduction">修真四万年</div> -->
+                <div class="tag">
+                    <span class="type">科幻</span>
+                    <span class="status">完本</span>
+                    <span class="longth">1059.98万字</span>
+                </div>
+                <div class="introduction">修真四万年</div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

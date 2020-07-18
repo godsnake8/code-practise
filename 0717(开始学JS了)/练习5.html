@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 变量的传递
+        var a = 100;
+        var b = 1000;
+        a = b;
+        // 把 b 赋值 给 a
+        console.log(a)
+
+        var c = '200';
+
+        console.log(a + c)
+        // 隐式转换,数字和字符串运算加法,数字变成了字符串
+        console.log(a - c)
+        // 减法,乘法,除法默认将别的变量类型转换为数字
+    </script>
+</body>
+
+</html>
