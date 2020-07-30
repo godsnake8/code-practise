@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        ul {
+            width: 200px;
+            margin: 30px auto;
+            list-style: none;
+        }
+        
+        li {
+            width: 200px;
+            height: 30px;
+            line-height: 30px;
+            /* background-color: pink; */
+            margin-top: 20px;
+            border-bottom: 1px solid #888;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>li1</li>
+        <li>li2</li>
+        <li>li3</li>
+        <li>li4</li>
+        <li>li5</li>
+        <li>li6</li>
+        <li>li7</li>
+        <li>li8</li>
+    </ul>
+    <script>
+        var lis = document.querySelectorAll('li');
+        console.log(lis);
+        for (let i = 0; i < lis.length; i++) {
+            if (i % 2 == 0) {
+                lis[i].onclick = function() {
+                    lis[i].style.backgroundColor = 'pink';
+                }
+            } else {
+                lis[i].onclick = function() {
+                    lis[i].style.backgroundColor = 'blue';
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

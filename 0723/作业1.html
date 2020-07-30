@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- (面试某个字符在字符串中出现的次数或者找到字符串中出现次数最多的字符) -->
+    <!-- 2 找到数组中每个字母出现的次数["c", "a", "z", "a", "a", "b"]
+            < !--{
+                a: 3,
+                z: 1,
+                c: 1,
+                b: 1
+            }  -->
+    <script>
+        var str = 'qwertyujhgnmioiuytrqwghfsadcqwereesgasgartewwqrefgds';
+        var arr = str.split('');
+        console.log(arr);
+        var obj = new Object;
+        console.log(obj);
+        arr.sort();
+        console.log(arr);
+
+        for (i = 0; i < arr.length; i++) {
+            var key = arr[i];
+
+            if (obj[key]) {
+
+                obj[key] = obj[key] + 1
+            } else {
+                obj[key] = 1
+            }
+        }
+        console.log(obj);
+    </script>
+</body>
+
+</html>

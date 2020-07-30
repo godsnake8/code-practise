@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        body {
+            background-color: #999;
+        }
+        
+        .box {
+            width: 600px;
+            height: 600px;
+            background-color: blue;
+        }
+        
+        .middle-box {
+            width: 400px;
+            height: 400px;
+            background-color: green;
+        }
+        
+        .small-box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <div class="middle-box">
+
+            <div class="small-box">
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var sBox = document.querySelector('.small-box'),
+            mBox = document.querySelector('.middle-box'),
+            lBox = document.querySelector('.box');
+        // console.log(sBox, mBox, lBox);
+        sBox.onclick = function() {
+            console.log('红盒子被点击了');
+        }
+        mBox.onclick = function() {
+            console.log('绿盒子被点击了');
+        }
+        lBox.onclick = function() {
+            console.log('蓝盒子被点击了');
+        }
+
+        sBox.addEventListener('click', function() {
+            console.log('红盒子通过addEventListener添加的 冒泡事件');
+        })
+        sBox.addEventListener('click', function() {
+            console.log('红盒子通过addEventListener添加的 捕获事件');
+        }, true)
+        mBox.addEventListener('click', function() {
+            console.log('绿盒子通过addEventListener添加的 冒泡事件');
+        })
+        mBox.addEventListener('click', function() {
+            console.log('绿盒子通过addEventListener添加的 捕获事件');
+        }, true)
+        lBox.addEventListener('click', function() {
+            console.log('蓝盒子通过addEventListener添加的 冒泡事件');
+        })
+        lBox.addEventListener('click', function() {
+            console.log('蓝盒子通过addEventListener添加的 捕获事件');
+        }, true)
+    </script>
+</body>
+
+</html>

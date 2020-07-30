@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 封装选择排序
+        function selection(array) {
+            for (var b = 1; b < array.length; b++) {
+                var min = b - 1;
+                for (var a = b - 1; a < array.length; a++) {
+                    if (array[min] > array[a]) {
+                        min = a;
+                    }
+                }
+                var temp = array[b - 1];
+                array[b - 1] = array[min];
+                array[min] = temp;
+            }
+            return array;
+        }
+        console.log(selection([5, 2, 87, 2, 1]));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 第二题
+    var user = {
+        name: '张三',
+        age: 24,
+        children: [{
+            name: '小明',
+            age: 10
+        },{
+            name:'小红',
+            age:6
+        }],
+        like:['篮球','足球']
+    }
+
+     写一个函数,实现 对象的 深度复制
+     不能 使用简单的 赋值 var temp = user;
+     当我们把一个对象赋值给一个新的变量时，赋的其实是该对象的在栈中的地址，而不是堆中的数据。
+     也就是两个对象指向的是同一个存储空间，无论哪个对象发生改变，其实都是改变的存储空间的内容，因此，两个对象是联动的。
+    
+     类比咱们之前 递归知识点
+    function deepClone(obj){
+    } -->
+    <script>
+        var user = {
+            name: '张三',
+            age: 24,
+            children: [{
+                name: '小明',
+                age: 10
+            }, {
+                name: '小红',
+                age: 6
+            }],
+            like: ['篮球', '足球']
+        }
+
+        function deepClone(user) {
+            for (var key in user) {
+                var str = '属性名:' + key + ',' + '属性值:' + user[key];
+                if (user[key] instanceof Array) {
+                    var arr = user[key]
+                    console.log('→' + key);
+                    for (i = 0; i < user[key].length; i++) {
+                        deepClone(arr[i]);
+                    }
+                } else if (user[key] instanceof Object) {
+                    deepClone(user[key]);
+                } else {
+                    console.log(str);
+                }
+            }
+            return str;
+        }
+
+        console.log(deepClone(user));
+    </script>
+</body>
+
+</html>

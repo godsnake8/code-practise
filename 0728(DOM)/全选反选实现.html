@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    玩过的游戏: <br> &emsp;
+    <input type="checkbox"> 英雄联盟<br> &emsp;
+    <input type="checkbox"> 地下城与勇士<br> &emsp;
+    <input type="checkbox"> 魔兽争霸<br> &emsp;
+    <input type="checkbox"> 红色警戒<br>
+    <br> 以上都是: <input type="checkbox">
+
+    <script>
+        var checkBox = document.querySelectorAll('input')
+        console.log(checkBox);
+        var checkAll = checkBox[checkBox.length - 1];
+        for (let i = 0; i < checkBox.length - 1; i++) {
+            checkBox[i].onchange = function() {
+                for (let j = 0; j < checkBox.length - 1; j++) {
+                    var flag = true;
+                    if (!checkBox[j].checked) {
+                        flag = false;
+                    }
+                }
+                checkAll.checked = flag;
+            }
+        }
+        checkAll.onchange = function() {
+            for (let i = 0; i < checkBox.length - 1; i++) {
+                checkBox[i].checked = checkAll.checked
+            }
+        }
+    </script>
+</body>
+
+</html>

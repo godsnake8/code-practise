@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 大家从小到大，都玩儿过的一个庸俗的游戏：题目1：报7游戏的安全数
+
+        // 游戏玩儿法就是，大家轮流报数，如果报到能被7整除的数字，或者尾数是7的数字，都算踩地雷了。就应该罚唱歌。
+
+        // 请在控制台输出1~60之间的所有“安全数”。
+        for (var i = 1; i <= 60; i++) {
+            if (i % 7 !== 0) {
+                if (i % 10 !== 7) {
+                    console.log(i)
+                }
+            }
+        }
+        for (var a = 1; a <= 60; a++) {
+            if (i % 7 !== 0 && i % 10 !== 7) {
+                console.log(a)
+            }
+        }
+    </script>
+</body>
+
+</html>

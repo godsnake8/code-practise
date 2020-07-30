@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. 实现数组的翻转
+        var arr = [51, 84, 35, 18, 48, 12, 67]
+        for (var i = 0; i < arr.length / 2; i++) {
+            var temp = arr[i];
+            arr[i] = arr[arr.length - i - 1]
+            arr[arr.length - i - 1] = temp
+        }
+        console.log(arr);
+    </script>
+</body>
+
+</html>

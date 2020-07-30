@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .nav {
+            width: 650px;
+            font-size: 16px;
+            color: #333;
+            text-align: center;
+            margin: 50px auto;
+            user-select: none;
+        }
+        
+        .nav-item {
+            float: left;
+            padding: 26px 10px 38px;
+        }
+        
+        .focus {
+            background-color: orange;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+        <li class="nav-item">小米手机</li>
+        <li class="nav-item">Redmi 红米</li>
+        <li class="nav-item">电视</li>
+        <li class="nav-item">笔记本</li>
+        <li class="nav-item">家电</li>
+        <li class="nav-item">路由器</li>
+        <li class="nav-item">智能硬件</li>
+        <li class="nav-item">服务</li>
+    </ul>
+    <script>
+        var navItem = document.querySelectorAll('.nav-item');
+        console.log(navItem);
+        for (let i = 0; i < navItem.length; i++) {
+            if (navItem[i].classList.contains('focus')) {
+                navItem[i].onclick = function() {
+                    document.querySelector('.nav-item.focus').classList.remove('focus');
+
+                    this.classList.add('focus');
+                }
+            } else {
+                navItem[i].onclick = function() {
+                    this.classList.add('focus');
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

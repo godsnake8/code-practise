@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [21, 84, 52, 12, 98, 64, 35, 74]
+            // 1. C U R D
+        arr[arr.length] = 'create';
+        arr[10] = 22;
+        // 创建时跳过的数组元素为empty
+        console.log(arr);
+
+        arr[9] = 'update';
+        console.log(arr);
+
+        var retrieve = arr[3];
+        console.log(retrieve);
+
+        arr.splice(10, 1);
+        console.log(arr);
+
+        // 在尾/头添加新的元素,返回值为新的长度
+        // arr.push() arr.unshift()
+        // 在尾 / 头部移除元素,返回值为删除的元素
+        // arr.pop() arr.shift()
+        // 以上数组的方法均会改变数组
+
+        var newarr;
+        arr.concat(newarr);
+        // 连接数组,不会改变数组,返回值为连接后的数组
+
+        arr.join('')
+        var str = '123,456,789'
+        var newStr = str.split(',')
+        console.log(str);
+        console.log(newStr);
+        // 不会改变数组或字符串, 返回值为改变后的结果
+    </script>
+</body>
+
+</html>

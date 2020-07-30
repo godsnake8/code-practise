@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 用户输入一个数字， 弹出这个数字是否是质数。
+        var Num = prompt('请输入一个正整数')
+
+        var a = 0
+        for (var i = 1; i <= Num; i++) {
+            if (Num % i == 0) {
+                a = a + 1
+            }
+        }
+        if (a == 2) {
+            alert('用户输入的数为质数')
+        } else {
+            alert('用户输入的数不为质数')
+        }
+    </script>
+</body>
+
+</html>

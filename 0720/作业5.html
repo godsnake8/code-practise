@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 水仙花数是一种特殊的三位数，它的特点就是，每个数位的立方和，等于它本身。
+
+        // 比如153就是水仙花数。因为：
+        // 13+53+33 = 153
+
+        // 100~999之内，只有4个水仙花数，请找出来。
+
+        for (var i = 100; i <= 999; i++) {
+            var a = Math.floor(i / 100)
+            var b = Math.floor(i % 100 / 10)
+            var c = i % 10
+            if (i == Math.pow(a, 3) + Math.pow(b, 3) + Math.pow(c, 3)) {
+                console.log(i);
+            }
+        }
+    </script>
+</body>
+
+</html>

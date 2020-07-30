@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [84, 31, 56, 05, 78, 96, 15, 54, 94, 72];
+
+        for (var j = 1; j < arr.length; j++) {
+            // 单次循环
+            var min = j - 1;
+            for (var i = j - 1; i < arr.length; i++) {
+                if (arr[min] > arr[i]) {
+                    min = i;
+                }
+            }
+            var temp = arr[j - 1];
+            arr[j - 1] = arr[min];
+            arr[min] = temp;
+        }
+        console.log(arr);
+    </script>
+</body>
+
+</html>

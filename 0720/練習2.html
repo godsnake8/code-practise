@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 用 xx年xx月xx日 x时x分x秒的方式显示当前时间
+        var LT = new Date();
+        console.log(LT);
+        var Y = LT.getFullYear();
+        var M = LT.getMonth() + 1; // 月份为0-11
+        var D = LT.getDay();
+        var h = LT.getHours();
+        var m = LT.getMinutes();
+        var s = LT.getSeconds();
+        console.log('' + Y + '年' + M + '月' + D + '日' + h + '时' + m + '分' + s + '秒')
+        console.log('' + Y + '年' + M + '月' + D + '日' + h + '时' + m + '分' + s + '秒');
+        // 利用时间戳实现倒计时(以距离国庆节的时间为例)
+        var ND = new Date("2020 / 10 / 1 00: 00: 00");
+        console.log(ND);
+        var b = ND.getTime();
+        var a = LT.getTime();
+
+        console.log(b - a); //单位为毫秒
+        var c = Math.round((b - a) / 1000);
+        console.log(c) // 单位为秒
+        var D1 = Math.floor(c / 86400);
+        var h1 = Math.floor(c % 86400 / 3600);
+        var m1 = Math.floor(c % 3600 / 60);
+        var s1 = c % 60;
+
+        console.log(alert('距离国庆节还有' + D1 + '天' + h1 + '时' + m1 + '分' + s1 + '秒'));
+    </script>
+</body>
+
+</html>

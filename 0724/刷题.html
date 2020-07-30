@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var b = 10;
+        (function b() {
+            // 'use strict'
+            b = 20
+            console.log(b)
+        })()
+
+
+
+
+        var two = 0.2;
+        var one = 0.1;
+        var eight = 0.8;
+        var six = 0.6;
+        console.log([two - one == one, eight - six == two]);
+        console.log(two - one);
+        console.log(eight - six);
+
+
+
+
+        function showCase(value) {
+            switch (value) {
+                case 'A':
+                    console.log('Case A');
+                    break;
+                case 'B':
+                    console.log('Case B');
+                    break;
+                case undefined:
+                    console.log('undefined');
+                    break;
+                default:
+                    console.log('Do not know!');
+            }
+        }
+        showCase(new String('A'));
+        var str = new String('A');
+        console.log(str);
+
+
+        console.log([] == []);
+        console.log({} == {});
+        console.log([] == ![]);
+        console.log({} == !{});
+        var a = function() {
+            console.log(11)
+        };
+        var b = function() {
+            console.log(11)
+        };
+        console.log(a == b);
+
+
+
+        var a = Date(0);
+        var b = new Date();
+        console.log(typeof(a));
+        console.log(typeof(b));
+
+
+
+        var a = new Date("epoch");
+        console.log(a);
+    </script>
+</body>
+
+</html>

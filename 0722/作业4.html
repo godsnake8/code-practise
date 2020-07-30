@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 8、判断一个数是否是质数 isZhi()  和 isNaN() -->
+        var num = parseInt(prompt('请输入一个正整数'));
+
+        function isZhi(num) {
+            var j = 0
+            for (var i = 1; i <= num; i++) {
+                if (num % i === 0) {
+                    j++
+                }
+            }
+            return j === 2
+        }
+
+        console.log(isZhi(num));
+    </script>
+</body>
+
+</html>
